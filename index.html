@@ -48,7 +48,6 @@
             margin-left: 5px;
         }
 
-
         #about {
             margin-top: 20px;
             width: 97vw;
@@ -59,76 +58,46 @@
             border: 2px solid #ffffff;
             display: flex;
             justify-content: space-between;
-        }
-
-        #skills {
-            margin-top: 20px;
-            width: 97vw;
-            background-color: rgba(40, 42, 34, 0.874);
-            padding: 10px;
-            box-sizing: border-box;
-            border-radius: 14px;
-            border: 2px solid #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #contact {
-            margin-top: 20px;
-            width: 97vw;
-            background-color: rgba(47, 0, 255, 0.874);
-            padding: 10px;
-            box-sizing: border-box;
-            border-radius: 14px;
-            border: 2px solid #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .con-head {
-            font-size: 2em;
-            color: #FFFFFF;
-            text-align: center;
+            flex-wrap: wrap;
         }
 
         .text-content {
-            width: 75%;
+            width: 100%;
+            text-align: center;
         }
 
         .gif-container {
-            width: 25%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .gif-container img {
-            width: 220px;
-            height: 220px;
+            width: 80%;
+            height: auto;
             border-radius: 15px;
         }
 
         .con-head {
-            font-size: 3em;
+            font-size: 2em;
             color: #FFFFFF;
             text-align: center;
         }
 
         .con-con {
-            font-size: 35px;
+            font-size: 1.2em;
             color: #FFFFFF;
         }
 
         .con-last {
-            font-size: 22px;
+            font-size: 1em;
             color: #ffffffcb;
         }
 
         #projects-head {
             font-size: 2em;
+            text-align: center;
         }
 
         #Projects {
@@ -158,18 +127,6 @@
 
         #Projects .card:hover {
             filter: brightness(1.1) drop-shadow(0 0 2px #0000ff6a) drop-shadow(0 0 10px #0066ff) drop-shadow(0 0 20px #41a3ff);
-        }
-
-
-        @media only screen and (max-width: 600px) {
-            #Projects {
-                flex-direction: column;
-            }
-
-            .card {
-                width: 100%;
-
-            }
         }
 
         .button {
@@ -211,7 +168,7 @@
                 0 0 4em 1em var(--glow-spread-color),
                 inset 0 0 0.75em 0.25em var(--glow-color);
             text-shadow: 0 0 0.5em var(--glow-color);
-            transition: all 0.3s;
+            transition: all 0.1s;
         }
 
         #Projects Button::after {
@@ -226,7 +183,6 @@
             filter: blur(1em);
             opacity: 0.5;
             transform: perspective(1.5em) rotateX(-35deg) scale(1, 0.3);
-
         }
 
         #Projects Button:hover {
@@ -260,7 +216,6 @@
         .card h3 {
             margin-top: 0;
             align-items: center;
-            /* Ensure the heading starts from the top of the card */
         }
 
         .card p {
@@ -271,8 +226,6 @@
         #con-head b {
             font-size: 2em;
         }
-
-
 
         .card1 {
             display: flex;
@@ -333,21 +286,72 @@
         }
 
         .card1 .social-link4:hover {
-            background-color: #12a50b;
+            background-color: #ff0000;
             animation: bounce_613 0.4s linear;
         }
 
-        @keyframes bounce_613 {
-            40% {
-                transform: scale(1.4);
-            }
+        .footer-container {
+            background-color: rgba(40, 42, 34, 0.874);
+            color: whitesmoke;
+            width: 100%;
+            height: 300px;
+            margin-top: 30px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 2px solid white;
+        }
 
-            60% {
+        #skills {
+            margin-top: 20px;
+            width: 97vw;
+            background-color: rgba(40, 42, 34, 0.874);
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 14px;
+            border: 2px solid #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -200px;
+            background-color: #0f1196;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        nav a {
+            padding: 15px 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #000000;
+        }
+
+        
+
+        @keyframes bounce_613 {
+            0% {
                 transform: scale(0.8);
             }
 
-            80% {
-                transform: scale(1.2);
+            50% {
+                transform: scale(1.1);
             }
 
             100% {
@@ -355,12 +359,91 @@
             }
         }
 
+        @media screen and (max-width: 768px) {
+            #Projects .button {
+                margin-bottom: 20px;
+            }
+
+            .head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .head a {
+                margin: 5px 0;
+                font-size: 16px;
+            }
+
+            .search-container {
+                width: 100%;
+                margin-left: 0;
+                justify-content: center;
+            }
+
+            .search-container input[type="text"] {
+                width: 60%;
+            }
+
+            .search-container button {
+                width: 30%;
+            }
+
+            #about {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gif-container img {
+                width: 100%;
+            }
+
+            #Projects .card {
+                flex-basis: 100%;
+            }
+
+            #Projects .card {
+                height: calc(1/3 * 100vh);
+                max-width: calc(3/4 * 100vw);
+            }
+
+            #Projects .button {
+                margin-bottom: 10px;
+            }
 
 
+        }
     </style>
     <script>
         function show() {
             alert("Not Added Now.");
+        }
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert("Right Click & Long Press not allowed.");
+        });
+
+        document.onkeydown = function (e) {
+            if (e.ctrlKey &&
+                (e.keyCode === 67 ||
+                    e.keyCode === 85 ||
+                    e.keyCode === 117)) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+        function toggleNav() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.left =
+                sidebar.style.left === "0px" || sidebar.style.left === "" ?
+                    "-200px" :
+                    "0";
+        }
+
+        function hideNav() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.left = "-200px";
         }
     </script>
 </head>
@@ -368,16 +451,23 @@
 <body id="home">
     <header>
         <div class="head" id="navmain">
-            <a href="#home" class="portfolio">Portfolio</a>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects-head">Project</a>
-            <a href="#skills">Skill</a>
-            <a href="#con-head">Contact</a>
-            <a href="more.html">More</a>
+            <span class="menu-btn" onclick="toggleNav()">&#9776; <a>Menu</a></span>
+            <nav id="sidebar">
+                <a href="#" onclick="hideNav() ">Close &#10006;</a>
+                <a href="#home" class="portfolio">Portfolio</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects-head">Project</a>
+                <a href="#skills">Skill</a>
+                <a href="#con-head">Contact</a>
+                <a href="more.html">More</a>
+            </nav>
         </div>
     </header>
 
+    <div class="hide-cur" onclick="hideNav()">
+
+    
     <div id="about">
         <div class="text-content">
             <p class="con-head"><b><u>Welcome To My Portfolio</u></b></p>
@@ -393,7 +483,7 @@
 
     <p id="projects-head" class="prj-head" align="center"><b>PROJECTS</b></p>
 
-    <div id="Projects">
+    <div align="center" id="Projects">
         <div class="card">
             <h3>Project 1</h3>
             <p>Description of Project 1</p>
@@ -444,8 +534,8 @@
 
     <div id="skills">
         <p class="skill-txt">
-            Languages : C++ , C ,JAVA<br>
-            Tools : Visual Studio Code , Android Studio , Github<br>
+            <b>Languages : </b>C++ , C ,JAVA <br><br>
+            <b>Tools</b> : Visual Studio Code , Android Studio , Github<br>
             Database : MySQL
         </p>
     </div>
@@ -491,6 +581,7 @@
 
         </div>
     </footer>
+    </div>
 </body>
 
 </html>

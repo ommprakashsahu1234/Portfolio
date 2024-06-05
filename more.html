@@ -7,14 +7,16 @@
     <title>Omm Prakash Sahu - Portfolio</title>
     <link rel="icon" href="Logo.jpg">
     <style>
-        .contents .implink,
-        #con-head b {
-            font-size: 2em;
-        }
-
+        /* Common styles for both desktop and mobile */
         body {
             background-color: #000033;
             color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        a{
+            color:white;
         }
 
         .head {
@@ -36,41 +38,99 @@
             color: #ffffffaf;
         }
 
-        .search-container {
-            display: flex;
-            align-items: center;
-            margin-left: auto;
+        /* Responsive styles for desktop */
+        @media only screen and (min-width: 768px) {
+            .contents .implink,
+            #con-head b {
+                font-size: 2em;
+            }
+
+            .search-container {
+                margin-left: auto;
+            }
+
+            .imp-links {
+                width: 95vw;
+                border-radius: 3px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #ffff00;
+                background-color: rgba(40, 42, 34, 0.874);
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+                line-height: 2;
+                font-size: 1.1em;
+            }
+
+            .comment {
+                width: 95vw;
+                height: 100vh;
+                border-radius: 3px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #ffff00;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+            }
+
+            .comment iframe {
+                width: 100%;
+                height: 100%;
+            }
         }
 
-        .search-container input[type="text"] {
-            padding: 5px;
-            font-size: 16px;
+       
+        @media only screen and (max-width: 767px) {
+            .contents .implink,
+            #con-head b {
+                font-size: 1.5em;
+            }
+
+            .search-container {
+                margin-left: auto;
+            }
+
+            .imp-links {
+                width: 90vw;
+                border-radius: 3px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #ffff00;
+                background-color: rgba(40, 42, 34, 0.874);
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+                line-height: 2;
+                font-size: 1em;
+            }
+
+            .comment {
+                width: 90vw;
+                height: 70vh;
+                border-radius: 3px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #ffff00;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 10px;
+            }
+
+            .comment iframe {
+                width: 100%;
+                height: 70vh;
+            }
         }
-
-        .search-container button {
-            padding: 5px 10px;
-            font-size: 16px;
-            margin-left: 5px;
-        }
-
-
-        #contact {
-            margin-top: 20px;
-            width: 97vw;
-            background-color: rgba(47, 0, 255, 0.874);
-            padding: 10px;
-            box-sizing: border-box;
-            border-radius: 14px;
-            border: 2px solid #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-
-
-
 
         .card1 {
             display: flex;
@@ -131,71 +191,22 @@
         }
 
         .card1 .social-link4:hover {
-            background-color: #12a50b;
+            background-color: #ff0000;
             animation: bounce_613 0.4s linear;
         }
 
-        @keyframes bounce_613 {
-            40% {
-                transform: scale(1.4);
-            }
-
-            60% {
-                transform: scale(0.8);
-            }
-
-            80% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .imp-links {
-            width: 95vw;
-            border-radius: 3px;
-            border-width: 2px;
-            border-style: solid;
-            border-color: #ffff00;
+        .footer-container {
             background-color: rgba(40, 42, 34, 0.874);
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            padding: 10px;
-            line-height: 2;
-            font-size: 1.1em;
-        }
-
-        .imp-links:hover {
-            filter: brightness(0.9) drop-shadow(0 0 2px #0000ff6a) drop-shadow(0 0 10px rgba(40, 42, 34, 0.874)) drop-shadow(0 0 20px #41a3ff);
-
-        }
-
-        .imp-links a {
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .comment {
-            width: 95vw;
-            height:100vh;
-            border-radius: 3px;
-            border-width: 2px;
-            border-style: solid;
-            border-color: #ffff00;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            padding: 10px;
-        }
-
-        .comment iframe {
+            color: whitesmoke;
             width: 100%;
-            height: 100%;
+            height: 300px;
+            margin-top: 30px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: 2px solid white;
         }
     </style>
     <script>
@@ -217,7 +228,7 @@
 
 
     <div class="contents">
-        <p align="center" class="implink">IMPORTANT LINKS</p>
+        <p align="center" class="implink"><b>IMPORTANT LINKS</b></p>
         <div class="imp-links">
             <a href="mailto:opsommprakash+portfoliovisit@outlook.com">EMail</a><br>
             <a href="www.linkedin.com/in/omm-prakash-sahu">LinkedIn</a><br>
